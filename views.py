@@ -1,27 +1,37 @@
-# blog/views.py
+from django.shortcuts import render, get_object_or_404
+from .models import Recipe, Comment
 
-from django.shortcuts import render
-from .models import Post, Comment
-
-def get_all_and_recent(model, recent_limit=5):
-    all_items = model.objects.all()
-    recent_items = model.objects.order_by('-created_at')[:recent_limit]
+def fetch_all_and_recent_items(model, recent_limit=5):
+    """Obtiene todos los elementos y los más recientes de un modelo dado."""
+    all_items = model.objects.all()  # Obtiene todos los registros del modelo
+    recent_items = model.objects.order_by('-created_at')[:recent_limit]  # Obtiene los registros más recientes
     return all_items, recent_items
 
-def show_all_posts(request):
-    posts, recent_posts = get_all_and_recent(Post)
+def render_view(request, template_name, model, title, recent_limit=5):
+    """Renderiza la vista con todos los elementos y los recientes para el modelo especificado."""
+    all_items, recent_items = fetch_all_and_recent_items(model, recent_limit)
     context = {
-        'posts': posts,
-        'recent_posts': recent_posts,
-        'title': "All Posts"
+        'all_items': all_items,
+        'recent_items': recent_items,
+        'title': title
     }
-    return render(request, 'blog/posts.html', context)
+    return render(request, template_name, context)  # Renderiza la plantilla con el contexto especificado
 
-def show_all_comments(request):
-    comments, recent_comments = get_all_and_recent(Comment)
+def recipe_list(request):
+    """Vista para mostrar la lista de todas las recetas."""
+    return render_view(request, 'recipe_app/recipe_list.html', Recipe, "All Recipes")
+
+def recipe_detail(request, recipe_id):
+    """Vista para mostrar el detalle de una receta específica y sus comentarios."""
+    recipe = get_object_or_404(Recipe, pk=recipe_id)  # Obtiene la receta o lanza un error 404
+    comments = recipe.comments.all()  # Obtiene todos los comentarios asociados a la receta
     context = {
+        'recipe': recipe,
         'comments': comments,
-        'recent_comments': recent_comments,
-        'title': "All Comments"
+        'title': f"Detail of {recipe.title}"
     }
-    return render(request, 'blog/comments.html', context)
+    return render(request, 'recipe_app/recipe_detail.html', context)  # Renderiza la plantilla de detalle
+
+def comment_list(request):
+    """Vista para mostrar la lista de todos los comentarios."""
+    return render_view(request, 'recipe_app/comments.html', Comment, "All Comments")
