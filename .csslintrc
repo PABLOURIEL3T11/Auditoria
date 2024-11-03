@@ -1,0 +1,16 @@
+{
+    "rules": {
+        "box-model": false,
+        "box-shadow": true,
+        "compatible-vendor-prefixes": true,
+        "duplicate-properties": true,
+        "errors": {
+            "property-empty": true,
+            "font-sizes": true,
+            "vendor-prefix": true
+        },
+        "important": true,
+        "vendor-prefix": true,
+        "unqualified-attributes": false
+    }
+}
