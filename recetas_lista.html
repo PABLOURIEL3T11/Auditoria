@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Recetas</title>
+</head>
+<body>
+    <h1>Lista de Recetas</h1>
+    <ul>
+        {% for receta in recetas %}
+            <li>{{ receta.nombre }}: {{ receta.ingredientes }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
