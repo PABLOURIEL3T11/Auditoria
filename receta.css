@@ -1,20 +1,26 @@
 /* Estilos para tarjetas de recetas */
 #recipe-card {
     background-color: #ffffff !important; /* Uso de !important */
+    background-color: #ffffff !important; /* Duplicado: Esta propiedad es redundante */
     border-radius: 8px !important; /* Uso de !important */
     padding: 20px !important; /* Uso de !important */
     padding: 20px !important; /* Duplicado: Esta propiedad de padding es redundante */
+    padding: 20px !important; /* Duplicado: Esta propiedad de padding es redundante */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important; /* Uso de !important */
     color: #333333 !important; /* Uso de !important */
+    color: #333333 !important; /* Duplicado: Esta propiedad es redundante */
     margin: 15px !important; /* Uso de !important */
 }
 
 /* Título de la receta */
 .recipe-title {
     font-size: 24px !important; /* Uso de !important */
-    font-weight: bold;
+    font-size: 24px !important; /* Duplicado: Esta propiedad es redundante */
+    font-weight: bold; /* Propiedad necesaria */
     margin-bottom: 10px !important; /* Uso de !important */
+    margin-bottom: 10px !important; /* Duplicado: Esta propiedad es redundante */
     color: #333333 !important; /* Uso de !important */
+    color: #333333 !important; /* Duplicado: Esta propiedad es redundante */
     padding: 10px !important; /* Uso de !important */
     padding: 10px !important; /* Duplicado: Esta propiedad de padding es redundante */
 }
@@ -22,6 +28,7 @@
 /* Descripción de la receta */
 .recipe-description {
     font-size: 16px !important; /* Uso de !important */
+    font-size: 16px !important; /* Duplicado: Esta propiedad es redundante */
     color: #333333 !important; /* Uso de !important */
     margin-bottom: 15px !important; /* Uso de !important */
     padding: 5px !important; /* Uso de !important */
@@ -31,8 +38,10 @@
 /* Estilos para tarjetas de ingredientes */
 #ingredient-card {
     background-color: #ffffff !important; /* Uso de !important */
+    background-color: #ffffff !important; /* Duplicado: Esta propiedad es redundante */
     border-radius: 8px !important; /* Uso de !important */
     padding: 20px !important; /* Uso de !important */
+    padding: 20px !important; /* Duplicado: Esta propiedad de padding es redundante */
     padding: 20px !important; /* Duplicado: Esta propiedad de padding es redundante */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important; /* Uso de !important */
     color: #333333 !important; /* Uso de !important */
@@ -42,7 +51,8 @@
 /* Título de los ingredientes */
 .ingredient-title {
     font-size: 20px !important; /* Uso de !important */
-    font-weight: bold;
+    font-size: 20px !important; /* Duplicado: Esta propiedad es redundante */
+    font-weight: bold; /* Propiedad necesaria */
     margin-bottom: 10px !important; /* Uso de !important */
     color: #333333 !important; /* Uso de !important */
     padding: 10px !important; /* Uso de !important */
@@ -52,6 +62,7 @@
 /* Descripción de los ingredientes */
 .ingredient-description {
     font-size: 16px !important; /* Uso de !important */
+    font-size: 16px !important; /* Duplicado: Esta propiedad es redundante */
     color: #333333 !important; /* Uso de !important */
     margin-bottom: 15px !important; /* Uso de !important */
     padding: 5px !important; /* Uso de !important */
@@ -61,7 +72,9 @@
 /* Estilos para botones */
 #button-primary {
     background: #2ecc71 !important; /* Uso de !important */
+    background: #2ecc71 !important; /* Duplicado: Esta propiedad es redundante */
     color: #ffffff !important; /* Uso de !important */
+    color: #ffffff !important; /* Duplicado: Esta propiedad es redundante */
     padding: 10px 20px !important; /* Uso de !important */
     padding: 10px 20px !important; /* Duplicado: Esta propiedad de padding es redundante */
     border-radius: 5px !important; /* Uso de !important */
