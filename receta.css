@@ -1,45 +1,71 @@
-/* Estilos de tarjeta de recetas */
-.recipe-card {
+#recipe-card {
     background-color: #ffffff;
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: #333;
+    color: #333333;
     margin: 15px;
+    border-radius: 8px; /* Duplicado */
 }
 
-.recipe-card-title {
+.recipe-title {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
-    color: #333;
+    color: #333333;
+    font-size: 24px; /* Duplicado */
+    padding: 10px;
 }
 
-.recipe-card-description {
+.recipe-description {
     font-size: 16px;
+    color: #333333;
     margin-bottom: 15px;
-    color: #333;
+    padding: 5px;
+    padding: 5px; /* Duplicado */
 }
 
-/* Estilos de tarjeta de ingredientes */
-.ingredient-card {
+/* Estilos para tarjetas de ingredientes */
+#ingredient-card {
     background-color: #ffffff;
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: #333;
+    color: #333333;
     margin: 15px;
 }
 
-.ingredient-card-title {
+.ingredient-title {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;
-    color: #333;
+    color: #333333;
+    font-size: 20px; /* Duplicado */
 }
 
-.ingredient-card-description {
+.ingredient-description {
     font-size: 16px;
+    color: #333333;
     margin-bottom: 15px;
-    color: #333;
+    padding: 5px;
+    margin-bottom: 15px; /* Duplicado */
+}
+
+/* Estilos para botones */
+#button-primary {
+    background: #2ecc71;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px 20px; /* Duplicado */
+    border-radius: 5px; /* Duplicado */
+}
+
+#button-primary {
+    background: #2ecc71;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
 }
