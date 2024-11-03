@@ -1,0 +1,45 @@
+/* Estilos de tarjeta de recetas */
+.recipe-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
+    margin: 15px;
+}
+
+.recipe-card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.recipe-card-description {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Estilos de tarjeta de ingredientes */
+.ingredient-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
+    margin: 15px;
+}
+
+.ingredient-card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.ingredient-card-description {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #333;
+}
