@@ -1,0 +1,62 @@
+/* Estilos para tarjetas de recetas */
+#recipe-card {
+    background-color: #ffffff; /* Sin uso de !important */
+    border-radius: 8px; /* Sin uso de !important */
+    padding: 20px; /* Sin duplicados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sin uso de !important */
+    color: #333333; /* Sin uso de !important */
+    margin: 15px; /* Sin uso de !important */
+}
+
+/* Título de la receta */
+.recipe-title {
+    font-size: 24px; /* Sin uso de !important */
+    font-weight: bold; /* Propiedad necesaria */
+    margin-bottom: 10px; /* Sin uso de !important */
+    color: #333333; /* Sin uso de !important */
+    padding: 10px; /* Sin duplicados */
+}
+
+/* Descripción de la receta */
+.recipe-description {
+    font-size: 16px; /* Sin uso de !important */
+    color: #333333; /* Sin uso de !important */
+    margin-bottom: 15px; /* Sin uso de !important */
+    padding: 5px; /* Sin duplicados */
+}
+
+/* Estilos para tarjetas de ingredientes */
+#ingredient-card {
+    background-color: #ffffff; /* Sin uso de !important */
+    border-radius: 8px; /* Sin uso de !important */
+    padding: 20px; /* Sin duplicados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sin uso de !important */
+    color: #333333; /* Sin uso de !important */
+    margin: 15px; /* Sin uso de !important */
+}
+
+/* Título de los ingredientes */
+.ingredient-title {
+    font-size: 20px; /* Sin uso de !important */
+    font-weight: bold; /* Propiedad necesaria */
+    margin-bottom: 10px; /* Sin uso de !important */
+    color: #333333; /* Sin uso de !important */
+    padding: 10px; /* Sin duplicados */
+}
+
+/* Descripción de los ingredientes */
+.ingredient-description {
+    font-size: 16px; /* Sin uso de !important */
+    color: #333333; /* Sin uso de !important */
+    margin-bottom: 15px; /* Sin uso de !important */
+    padding: 5px; /* Sin duplicados */
+}
+
+/* Estilos para botones */
+#button-primary {
+    background: #2ecc71; /* Sin uso de !important */
+    color: #ffffff; /* Sin uso de !important */
+    padding: 10px 20px; /* Sin duplicados */
+    border-radius: 5px; /* Sin uso de !important */
+    font-size: 14px; /* Sin uso de !important */
+}
