@@ -1,0 +1,30 @@
+{
+    "env": {
+      "browser": true,
+      "node": true,
+      "es6": true
+    },
+    "extends": [
+      "eslint:recommended"
+    ],
+    "rules": {
+      "indent": ["error", 2],                  // Indentación de 2 espacios
+      "quotes": ["error", "double"],            // Comillas dobles
+      "semi": ["error", "always"],              // Punto y coma al final
+      "max-lines": ["warn", { 
+        "max": 300,                             // Límite de líneas en un archivo
+        "skipBlankLines": true,                 // Omitir líneas en blanco
+        "skipComments": true                    // Omitir líneas de comentarios
+      }],
+      "max-lines-per-function": ["warn", {      // Límite de líneas por función
+        "max": 50,                              // Ajusta este número según la necesidad
+        "skipBlankLines": true,
+        "skipComments": true
+      }],
+      "max-depth": ["warn", 4],                 // Profundidad máxima de anidación
+      "complexity": ["warn", 10],               // Complejidad ciclomática máxima
+      "max-params": ["warn", 4],                // Límite de parámetros por función
+      "max-statements": ["warn", 10]            // Límite de declaraciones por función
+    }
+  }
+  
