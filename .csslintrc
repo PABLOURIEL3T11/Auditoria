@@ -13,4 +13,9 @@
         "vendor-prefix": true,
         "unqualified-attributes": false
     }
+{
+  "rules": {
+    "max-lines": ["warn", { "max": 300, "skipBlankLines": true, "skipComments": true }]
+  }
+}
 }
