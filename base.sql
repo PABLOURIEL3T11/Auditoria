@@ -85,3 +85,14 @@ CREATE VIEW ElectronicsInventory AS
 SELECT id, product_name, price 
 FROM inventory 
 WHERE category = 'electronics';
+DELIMITER $$
+CREATE PROCEDURE GetActiveUsers()
+BEGIN
+    SELECT * FROM users WHERE status = 'active';
+END$$
+
+DELIMITER $$
+CREATE PROCEDURE GetInactiveUsers()
+BEGIN
+    SELECT * FROM users WHERE status = 'inactive';
+END$$
