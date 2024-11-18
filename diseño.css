@@ -1,0 +1,51 @@
+/* Problemas: Uso de valores fijos, falta de media queries adecuadas y desbordamiento horizontal */
+
+.container {
+    width: 1200px; /* Ancho fijo que no se adapta a pantallas pequeñas */
+    margin: 0 auto;
+}
+
+.header {
+    height: 300px; /* Altura fija, no ajustable */
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #555;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-item {
+    width: 200px; /* Ancho fijo que puede causar problemas en pantallas pequeñas */
+    text-align: center;
+    padding: 15px;
+    color: white;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    width: 400px; /* Ancho fijo */
+    height: 300px; /* Altura fija */
+    margin: 10px;
+    background-color: lightgray;
+    overflow: hidden; /* No resuelve problemas de contenido desbordado */
+}
+
+.footer {
+    height: 150px; /* Altura fija */
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Falta de media queries para pantallas pequeñas */
