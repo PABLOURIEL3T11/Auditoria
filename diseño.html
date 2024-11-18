@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño interfaz</title>
+    <style>
+       
+
+        .container {
+            width: 1000px; 
+            margin: 0 auto;
+        }
+
+        .header {
+            background-color: lightblue;
+            height: 200px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card {
+            width: 400px; /* Valor fijo */
+            margin: 10px;
+            padding: 20px;
+            background-color: lightgreen;
+        }
+
+        /* Estilo de media query incorrecto */
+        @media (max-width: 600px) {
+            .container {
+                width: 80%; 
+            }
+            .card {
+                width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Responsive Design Issue</h1>
+        </div>
+        <div class="main-content">
+            <div class="card">
+                <h2>Card 1</h2>
+                <p>Some content here...</p>
+            </div>
+            <div class="card">
+                <h2>Card 2</h2>
+                <p>Some content here...</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
