@@ -1,32 +1,40 @@
-const bcrypt = require('bcrypt');
+// Archivo: userController.js
 
-// Función para agregar un usuario con cifrado de contraseña
-function addUser(name, email, password) {
-    if (!name || !email || !password) {
-        console.error("All fields are required!");
-        return;
-    }
-    const hashedPassword = bcrypt.hashSync(password, 10); 
-    const user = {
-        id: users.length + 1,
-        name,
-        email,
-        password: hashedPassword
-    };
-    users.push(user);
-    return user;
-}
+const db = require('./db');
+const logger = require('./logger');
 
-
-function loginUser(email, password) {
-    const user = users.find(user => user.email === email);
-    if (!user) {
-        console.log("Invalid credentials!");
-        return;
-    }
-    if (bcrypt.compareSync(password, user.password)) { 
-        console.log("Login successful!");
+// Función para crear un nuevo usuario
+function createUser(req, res) {
+    // Validación de parámetros
+    if (req.body.name && req.body.email) {
+        db.query('INSERT INTO users (name, email) VALUES (?, ?)', [req.body.name, req.body.email], (err, result) => {
+            if (err) {
+                // Manejo de error
+                logger.logError("Error in user creation: " + err);
+                res.status(500).send("Internal Server Error");
+            } else {
+                res.status(200).json({ message: "User created successfully" });
+            }
+        });
     } else {
-        console.log("Invalid credentials!");
+        res.status(400).send("Bad Request");
     }
 }
+
+// Función para actualizar un usuario
+function updateUser(req, res) {
+    db.query('UPDATE users SET name = ?, email = ? WHERE id = ?', [req.body.name, req.body.email, req.params.id], (err, result) => {
+        if (err) {
+            // Manejo de error
+            logger.logError("Error in user update: " + err);
+            res.status(500).send("Internal Server Error");
+        } else {
+            res.status(200).send("User updated successfully");
+        }
+    });
+}
+
+module.exports = {
+    createUser,
+    updateUser
+};
