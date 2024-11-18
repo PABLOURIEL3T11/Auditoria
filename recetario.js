@@ -1,10 +1,8 @@
-// Script no optimizado que realiza múltiples solicitudes al servidor
-const fetchData = async () => {
+// Realizar todas las solicitudes en paralelo para mejorar el rendimiento
+const fetchDataOptimized = async () => {
     const endpoints = ["/data1", "/data2", "/data3"];
-    for (let endpoint of endpoints) {
-        const response = await fetch(endpoint); // Realiza una solicitud por cada recurso
-        const data = await response.json();
-        console.log(data); // Manejo ineficiente de datos
-    }
+    const responses = await Promise.all(endpoints.map(endpoint => fetch(endpoint)));
+    const data = await Promise.all(responses.map(response => response.json()));
+    console.log(data); // Datos gestionados de manera eficiente
 };
-fetchData();
+fetchDataOptimized();
