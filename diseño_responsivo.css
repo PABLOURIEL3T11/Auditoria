@@ -1,0 +1,88 @@
+/* Configuración base: garantizar que el diseño sea adaptativo */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Estilo del contenedor principal */
+.container {
+    width: clamp(300px, 90%, 1200px); /* Ancho adaptable entre 300px y 1200px */
+    border: 0.5em solid #333; /* Bordes escalables */
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombras para estética */
+}
+
+/* Encabezado */
+.header {
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Contenido principal */
+.content {
+    display: flex;
+    flex-wrap: wrap; /* Asegura que los elementos se ajusten en filas */
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    flex: 1 1 300px; /* Cada tarjeta ocupa un ancho mínimo de 300px */
+    max-width: 400px; /* Límite máximo de ancho */
+    background-color: #eaeaea;
+    border: 0.3em solid #555; /* Bordes dinámicos */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1em;
+    color: #666;
+}
+
+/* Pie de página */
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    .header {
+        font-size: 1.5em; /* Ajusta el tamaño del texto */
+    }
+
+    .card {
+        flex: 1 1 100%; /* Cada tarjeta ocupa toda la fila */
+        border-width: 0.2em; /* Reduce el grosor del borde */
+    }
+
+    .container {
+        border-width: 0.3em; /* Reduce el grosor del borde del contenedor */
+    }
+}
