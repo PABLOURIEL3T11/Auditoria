@@ -2,14 +2,39 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Recetas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Recetas</title>
+    <!-- Enlace al archivo CSS para el diseño -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Lista de Recetas</h1>
-    <ul>
-        {% for receta in recetas %}
-            <li>{{ receta.nombre }}: {{ receta.ingredientes }}</li>
-        {% endfor %}
-    </ul>
+    <!-- Encabezado de la página -->
+    <header>
+        <h1>Recetas del Día</h1>
+    </header>
+
+    <!-- Contenedor principal de las recetas -->
+    <main>
+        <!-- Formulario para agregar nuevas recetas -->
+        <section class="recipe-form">
+            <input type="text" id="recipeName" placeholder="Nombre de la receta" aria-label="Nombre de la receta">
+            <input type="text" id="recipeIngredients" placeholder="Ingredientes" aria-label="Ingredientes">
+            <button id="addRecipeBtn" class="btn-primary">Agregar Receta</button>
+        </section>
+
+        <!-- Lista de recetas -->
+        <section>
+            <ul id="recipeList" class="recipe-list"></ul>
+        </section>
+    </main>
+
+    <!-- Pie de página con información -->
+    <footer>
+        <p>Desarrollado por [Tu Nombre]</p>
+    </footer>
+
+    <!-- Enlace al archivo JS para funcionalidades -->
+    <script src="app.js"></script>
 </body>
 </html>
+
