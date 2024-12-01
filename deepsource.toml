@@ -1,0 +1,46 @@
+version = 1
+
+# Configuración para Python
+[[analyzers]]
+name = "python"
+enabled = true
+runtime_version = "3.x" # Reemplaza con tu versión específica, como "3.10"
+exclude_patterns = [
+    "migrations/*",  # Excluye carpetas de migraciones
+    "tests/*",       # Excluye carpetas de pruebas
+]
+meta = {
+    autofix = true  # Habilita correcciones automáticas donde sea posible
+}
+
+# Configuración para JavaScript
+[[analyzers]]
+name = "javascript"
+enabled = true
+runtime_version = "nodejs16" # Reemplaza con la versión de Node.js que usas
+exclude_patterns = [
+    "dist/*",  # Excluye archivos generados
+    "node_modules/*",  # Excluye dependencias
+]
+meta = {
+    autofix = true  # Habilita correcciones automáticas donde sea posible
+}
+
+# Configuración para analizar archivos de seguridad (opcional)
+[[analyzers]]
+name = "secrets"
+enabled = true
+exclude_patterns = [
+    "tests/*"  # Excluye carpetas de pruebas
+]
+meta = {
+    scan_commits = true  # Escanea también los commits en busca de secretos
+}
+
+# Configuración para analizar infraestructura como código (opcional)
+[[analyzers]]
+name = "terraform"
+enabled = false  # Cambia a true si usas Terraform
+exclude_patterns = [
+    "examples/*",  # Excluye ejemplos
+]
